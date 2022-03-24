@@ -19,4 +19,12 @@ The Presentation Sample is the version of the DigiSpark that is meant to be used
 
 <b> What Does It Do? </b>
 
-This code is supposed to create a new account on a computer that is given Admin Access and is also given 
+This code is supposed to create a new account under the name Henry with the password Pass_123 on a computer that is given Admin Access and is also given Remote Desktop Access, meaning it can control a computer from a different computer. This is also known as a backdoor access. The account is then hidden from the loggin page in order to keep owner of the device from knowing about it.
+
+# What Does This Mean For School Computers?
+
+Pretty much nothing, as explained above, the attack cannot be used on school computers. The code relies on the use of task manager and Command Prompt in order to run, both which are blocked from being used by students.
+
+# Can A DigiSpark Be Blocked In The First Place?
+
+It's hard to say. Since the DigiSpark disguises itself as 
