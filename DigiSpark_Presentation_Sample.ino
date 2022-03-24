@@ -1,5 +1,9 @@
 //Code written and compiled by Eduardo Arballo
-//A simple example of a DigiSpark code safe to be used by students
+//Made in order to show the dangers of what a DigiSpark can do
+//Missuse of this can lead to damage of device and is not recommended to altar code in any way
+//NOT MEANT TO BE USED ON SCHOOL COMPUTERS
+//Any damage caused by this code is due to missuse and I am not reponsible
+//Strictly for educational purposes ONLY
 //Created in 3-24-22
 #include "DigiKeyboard.h"
 #define KEY_TAB      0x2b
@@ -19,27 +23,6 @@ void loop() {
   DigiKeyboard.print("Notepad");
   DigiKeyboard.delay(600);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.delay(600);
-  //Types in a simple message
-  DigiKeyboard.print("Hi!");
-  DigiKeyboard.delay(600);
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.print("I am the DigiSpark Board!");
-  DigiKeyboard.delay(600);
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.print("I am capable of taking control of your computer and doing what I am told to do");
-  DigiKeyboard.delay(600);
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.print("I can do much more than type simple messages");
-  DigiKeyboard.delay(600);
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.print("But I have been adviced to keep it simple as to not damage the school computers");
-  DigiKeyboard.delay(600);
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.print("Please pass me along to the next person when the light flashes");
-  DigiKeyboard.delay(600);
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.print("Thank You!");
   DigiKeyboard.delay(600);
   //Flashes LED when done
   digitalWrite(1,LOW);
