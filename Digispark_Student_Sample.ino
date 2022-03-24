@@ -27,7 +27,16 @@ void loop() {
   DigiKeyboard.print("I am capable of taking control of your computer and doing what I am told to do");
   DigiKeyboard.delay(600);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.print("I can do much more than type simple messages, such as doing this...");
+  DigiKeyboard.print("I can do much more than type simple messages");
+  DigiKeyboard.delay(600);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("But I have been adviced to keep it simple as to not damage the school computers");
+  DigiKeyboard.delay(600);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("Please pass me along to the next person when the light flashes");
+  DigiKeyboard.delay(600);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("Thank You!");
   DigiKeyboard.delay(600);
   //Flashes LED when done
   digitalWrite(1,LOW);
@@ -43,5 +52,6 @@ void loop() {
   digitalWrite(1,HIGH);
   DigiKeyboard.delay(500);
   digitalWrite(1,LOW);
+  //DigiSpark disconnects
   for(;;){ /*empty*/ }
 }
