@@ -1,3 +1,6 @@
+//Code written and compiled by Eduardo Arballo
+//A simple example of a DigiSpark code safe to be used by students
+//Created in 3-24-22
 #include "DigiKeyboard.h"
 #define KEY_TAB      0x2b
 
