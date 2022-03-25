@@ -27,4 +27,16 @@ Pretty much nothing, as explained above, the attack cannot be used on school com
 
 # Can A DigiSpark Be Blocked In The First Place?
 
-It's hard to say. Since the DigiSpark disguises itself as 
+It's hard to say. Since the DigiSpark disguises itself as keyboard, and blocking a keyboard from typing is not really a good idea since it is needed to type. The best way to keep an attach like this from happening is to simply lock the computer. In order for the DigiSpark to work, a computer needs to be logged in. Without the computer being logged in, the DigiSpark is defeated.
+
+# Of Course, The Warnings
+
+I hate to be the type of person who does this but, I need to be able to cover for myself.
+
+<b>
+  MISUSE OF THIS CODE AND MISUSE OF THE DIGISPARK CAN LEAD TO DAMAGING A COMPUTER OR OTHER DEVICES. TRYING TO EXECUTE THIS CODE WITHOUT PRIOR KNOWLEDGE OF WHAT YOU ARE DOING PUTS YOUR DEVICE IN DANGER. THESE ARE ONLY EXAMPLES AND ARE NOT PROPERLY MADE FOR BEING USED AS A RELIABLE TOOL. THEY ARE MEANT FOR DEMONSTRATIONS ONLY AND NOT TO BE USED FOR CAUSING HARM TO A COMPUTER OR DEVICE THAT DOES NOT BELONG TO YOU. I AM NOT RESPONSIBLE FOR ISSUES THAT OCCUR FROM ATTEMPTING TO REPLICATE MY DEMONSTRATIONS.
+</b>
+
+Thank you for understanding
+  
+  
