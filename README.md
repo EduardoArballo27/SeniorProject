@@ -2,6 +2,8 @@
 
 Senior Project 2021-2022
 
+# The Following Are Notes For Me To Show When Requested
+
 # What is a DigiSpark?
 
 A DigiSpark is an arduino board meant to run a script disguised as a keyboard typing
