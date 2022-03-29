@@ -59,6 +59,21 @@ void loop() {
   DigiKeyboard.delay(500);  
   DigiKeyboard.println("exit");
 
+  //Flashes LED when done
+  digitalWrite(1,LOW);
+  DigiKeyboard.delay(500);
+  digitalWrite(1,HIGH);
+  DigiKeyboard.delay(500);
+  digitalWrite(1,LOW);
+  DigiKeyboard.delay(500);
+  digitalWrite(1,HIGH);
+  DigiKeyboard.delay(500);
+  digitalWrite(1,LOW);
+  DigiKeyboard.delay(500);
+  digitalWrite(1,HIGH);
+  DigiKeyboard.delay(500);
+  digitalWrite(1,LOW);
+  
   //DigiSpark disconnects
   for(;;){ /*empty*/ }
 }
